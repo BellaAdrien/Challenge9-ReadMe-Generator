@@ -14,6 +14,47 @@ function renderLicenseSection(license) {}
 function generateMarkdown(data) {
   return `# ${data.title}
 
+  ${renderLicenseBadge(data)}
+
+  ##Description
+  ${data.description}
+  
+  
+  ## Table of Contents (Optional)
+  
+  If your README is long, add a table of contents to make it easy for users to find what they need.
+  
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Credits](#credits)
+  - [License](#license)
+  
+  ## Installation
+  ${data.installation}
+  
+  
+  
+  ## Usage
+  ${data.usage}
+  
+  
+  ## License
+  ${renderLicenseSection(data)}
+  
+  
+  ## Contribution
+  ${data.contribution}
+  
+  
+  
+  ## Tests
+  ${data.test}
+  
+  ## Questions
+<ul>  
+<li> <a href="https://github.com/${data.username}">Github Profile </a> </li>
+<li> <a href="mailto:${data.email}"> Email </a> </li>
+</ul>
 `;
 }
 
@@ -24,4 +65,3 @@ module.exports = generateMarkdown;
 
 
 
-// 20:07
